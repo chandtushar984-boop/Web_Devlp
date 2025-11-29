@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Clone</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6f0; /* changed background color */
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        header {
+            background-color: #ff6f61; /* changed primary color */
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGRlbGljaW91cyUyMGZvb2R8ZW58MHx8fHwxNjAyNzA5NjI5&ixlib=rb-4.0.3&q=80&w=1080'); /* new hero image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero input {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            background-color: #ffd166; /* accent color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .categories, .restaurants, .offers, .testimonials, .app, .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .categories h2, .restaurants h2, .offers h2, .testimonials h2, .app h2, .contact h2 {
+            margin-bottom: 30px;
+            color: #ff6f61;
+        }
+        .category-list, .restaurant-list, .offer-list, .testimonial-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .category-item, .restaurant-item, .offer-item, .testimonial-item {
+            background-color: #fff5f0;
+            padding: 20px;
+            border-radius: 10px;
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .restaurant-item img, .category-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: 140px;
+            object-fit: cover;
+        }
+        .restaurant-item h3, .category-item h3, .offer-item h3 {
+            margin: 10px 0 5px 0;
+        }
+        .rating {
+            color: #ffb400;
+        }
+        .app-links img {
+            width: 150px;
+            margin: 10px;
+        }
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Foodie</h1>
+        <nav>
+            <a href="#">Categories</a>
+            <a href="#">Restaurants</a>
+            <a href="#">Offers</a>
+            <a href="#">Testimonials</a>
+            <a href="#">App</a>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Delicious food, delivered to you</h1>
+        <p>Order from your favorite restaurants and get your meal delivered fast, fresh, and hot.</p>
+        <input type="text" placeholder="Enter your location">
+        <button>Order Now</button>
+    </section>
+
+    <section class="categories">
+        <h2>All Categories</h2>
+        <div class="category-list">
+            <div class="category-item">
+                <img src="https://images.unsplash.com/photo-1601924582971-77b0fdb9f9d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Pizza">
+                <h3>Pizza</h3>
+            </div>
+            <div class="category-item">
+                <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Burgers">
+                <h3>Burgers</h3>
+            </div>
+            <div class="category-item">
+                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Sushi">
+                <h3>Sushi</h3>
+            </div>
+            <div class="category-item">
+                <img src="https://images.unsplash.com/photo-1543352634-6f70c98b7ee4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Indian">
+                <h3>Indian</h3>
+            </div>
+            <div class="category-item">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Chinese">
+                <h3>Chinese</h3>
+            </div>
+            <div class="category-item">
+                <img src="https://images.unsplash.com/photo-1603079836764-0cf5983a7c99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Desserts">
+                <h3>Desserts</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurants">
+        <h2>Featured Restaurants</h2>
+        <div class="restaurant-list">
+            <div class="restaurant-item">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Pizza Palace">
+                <h3>Pizza Palace</h3>
+                <p>Pizza, Italian</p>
+                <p class="rating">★ 4.8</p>
+            </div>
+            <div class="restaurant-item">
+                <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Burger Hub">
+                <h3>Burger Hub</h3>
+                <p>Burgers, Fast Food</p>
+                <p class="rating">★ 4.6</p>
+            </div>
+            <div class="restaurant-item">
+                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Sushi World">
+                <h3>Sushi World</h3>
+                <p>Sushi, Japanese</p>
+                <p class="rating">★ 4.7</p>
+            </div>
+            <div class="restaurant-item">
+                <img src="https://images.unsplash.com/photo-1543352634-6f70c98b7ee4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Spice Route">
+                <h3>Spice Route</h3>
+                <p>Indian, Curry</p>
+                <p class="rating">★ 4.5</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers">
+        <h2>Promo Offers</h2>
+        <div class="offer-list">
+            <div class="offer-item">
+                <h3>🎉 30% OFF on your first order!</h3>
+            </div>
+            <div class="offer-item">
+                <h3>🚚 Free delivery on orders above $20</h3>
+            </div>
+            <div class="offer-item">
+                <h3>🍔 Buy 1 Get 1 Free on Burgers every Friday</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-list">
+            <div class="testimonial-item">
+                <p>★★★★★ "Foodie makes ordering food so easy and quick! The delivery is always on time and the food is hot."</p>
+                <strong>- Sarah M.</strong>
+            </div>
+            <div class="testimonial-item">
+                <p>★★★★★ "Great selection of restaurants and amazing offers. Highly recommend to all food lovers!"</p>
+                <strong>- James L.</strong>
+            </div>
+            <div class="testimonial-item">
+                <p>★★★★★ "The app is super user-friendly and the customer support is fantastic. Love Foodie!"</p>
+                <strong>- Priya S.</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="app">
+        <h2>Get the Foodie App</h2>
+        <p>Order food on the go! Download our app for the best experience and exclusive app-only deals.</p>
+        <div class="app-links">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: support@foodie.com</p>
+        <p>Phone: +1 234 567 890</p>
+        <p>Follow Us: 🌐 🐦 📸</p>
+    </section>
+
+    <footer>
+        © 2025 Foodie. All rights reserved.
+    </footer>
+</body>
+</html>
